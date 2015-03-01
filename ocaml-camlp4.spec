@@ -92,12 +92,12 @@ cp %{SOURCE4} docs/camlp4-tutorial.ps.gz
 %build
 ./configure
 
-%{__make} %{?with_opt:all}
+%{__make} -j1 %{?with_opt:all}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%{__make} -j1 install \
 	BINDIR=$RPM_BUILD_ROOT%{_bindir} \
 	LIBDIR=$RPM_BUILD_ROOT%{_libdir}/ocaml
 
