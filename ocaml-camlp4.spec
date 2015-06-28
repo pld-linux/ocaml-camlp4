@@ -2,8 +2,8 @@
 # Conditional build:
 %bcond_without	opt		# build opt
 
-%define		main_ver	4.02.1
-%define		subver		1
+%define		main_ver	4.02
+%define		subver		6
 
 %define		doc_ver		3.06
 
@@ -16,12 +16,12 @@ Summary:	Objective Caml Preprocessor
 Summary(pl.UTF-8):	Preprocesor OCamla
 Name:		ocaml-camlp4
 Version:	%{main_ver}.%{subver}
-Release:	2
+Release:	1
 Epoch:		1
 License:	LGPL v2 with linking exception
 Group:		Libraries
 Source0:	https://github.com/ocaml/camlp4/archive/%{main_ver}+%{subver}/camlp4-%{version}.tar.gz
-# Source0-md5:	8c19bcca52b92a5496dcbcbb931a988b
+# Source0-md5:	5bf758bb799e7a5ef9cad9cd1df91053
 # following 4 URLs are dead, some version now available at http://pauillac.inria.fr/camlp4/
 Source1:	ftp://ftp.inria.fr/INRIA/Projects/cristal/camlp4/camlp4-%{doc_ver}-manual.html.tar.gz
 # Source1-md5:	21370bae4e7f6435b38aeb21db7ce8bb
