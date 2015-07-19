@@ -1,14 +1,14 @@
 #
 # Conditional build:
-%bcond_without	opt		# build opt
+%bcond_without	ocaml_opt	# build opt (native code)
 
 %define		main_ver	4.02
 %define		subver		6
 
 %define		doc_ver		3.06
 
-%ifarch x32
-%undefine	with_opt
+%ifnarch %{ix86} %{x8664} arm aarch64 ppc sparc sparcv9
+%undefine	with_ocaml_opt
 %endif
 
 %define		module	camlp4
@@ -92,7 +92,7 @@ cp %{SOURCE4} docs/camlp4-tutorial.ps.gz
 %build
 ./configure
 
-%{__make} -j1 %{?with_opt:all}
+%{__make} -j1 %{?with_ocaml_opt:all}
 
 %install
 rm -rf $RPM_BUILD_ROOT
