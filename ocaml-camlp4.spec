@@ -16,7 +16,7 @@ Summary:	Objective Caml Preprocessor
 Summary(pl.UTF-8):	Preprocesor OCamla
 Name:		ocaml-camlp4
 Version:	%{main_ver}.%{subver}
-Release:	1
+Release:	2
 Epoch:		1
 License:	LGPL v2 with linking exception
 Group:		Libraries
