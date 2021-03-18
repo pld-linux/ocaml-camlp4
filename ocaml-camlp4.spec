@@ -2,7 +2,7 @@
 # Conditional build:
 %bcond_without	ocaml_opt	# build opt (native code)
 
-%define		main_ver	4.04
+%define		main_ver	4.12
 %define		subver		1
 
 %define		doc_ver		3.06
@@ -22,7 +22,7 @@ License:	LGPL v2 with linking exception
 Group:		Libraries
 #Source0Download: https://github.com/ocaml/camlp4/releases/
 Source0:	https://github.com/ocaml/camlp4/archive/%{main_ver}+%{subver}/camlp4-%{version}.tar.gz
-# Source0-md5:	305f61ffd98c4c03eb0d9b7749897e59
+# Source0-md5:	baa1a11a2252b400c46c87592fc46f22
 # following 4 URLs are dead, some version now available at http://pauillac.inria.fr/camlp4/
 Source1:	ftp://ftp.inria.fr/INRIA/Projects/cristal/camlp4/camlp4-%{doc_ver}-manual.html.tar.gz
 # Source1-md5:	21370bae4e7f6435b38aeb21db7ce8bb
@@ -33,7 +33,7 @@ Source3:	ftp://ftp.inria.fr/INRIA/Projects/cristal/camlp4/camlp4-%{doc_ver}-tuto
 Source4:	ftp://ftp.inria.fr/INRIA/Projects/cristal/camlp4/camlp4-%{doc_ver}-tutorial.dvi.gz
 # Source4-md5:	fcd87c235109364242a0c9ccf176dff8
 URL:		https://github.com/ocaml/camlp4
-BuildRequires:	ocaml >= 1:4.02
+BuildRequires:	ocaml >= 1:4.12
 BuildRequires:	ocaml-ocamlbuild
 %requires_eq	ocaml-runtime
 Provides:	camlp4 = %{epoch}:%{version}-%{release}
